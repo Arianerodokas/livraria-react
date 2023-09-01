@@ -19,9 +19,12 @@ export default function Home() {
       <View style={estilos.titulo}>
         {/* Livro: Melhor do que nos filmes */}
 
+      
         <View style={estilos.informacaolivros} >
           <View style={estilos.livro}>
+            <View style={estilos.card}>
             <Image style={estilos.imageminfo} source={nosfilmes} />
+        </View>
             <Text style={estilos.nomelivros}>Melhor do que nos Filmes</Text>
           </View>
           <Text style={estilos.descricao}>
@@ -33,12 +36,15 @@ export default function Home() {
           </Text>
           <Text style={estilos.preco}>R$ 41,00</Text>
         </View>
+        
 
         {/* Livro: A canção de aquiles */}
 
         <View style={estilos.informacaolivros}>
           <View style={estilos.livro}>
+          <View style={estilos.card}>
             <Image style={estilos.imageminfo} source={aquiles} />
+            </View>
             <Text style={estilos.nomelivros}>Canção de Aquiles</Text>
           </View>
 
@@ -54,7 +60,9 @@ export default function Home() {
 
             <View style={estilos.informacaolivros}>
           <View style={estilos.livro}>
+          <View style={estilos.card}>
             <Image style={estilos.imageminfo} source={imperfeitos} />
+            </View>
             <Text style={estilos.nomelivros}>Imperfeitos</Text>
           </View>
 
@@ -70,7 +78,9 @@ export default function Home() {
 
            <View style={estilos.informacaolivros}>
           <View style={estilos.livro}>
+          <View style={estilos.card}>
             <Image style={estilos.imageminfo} source={little} />
+            </View>
             <Text style={estilos.nomelivros}>Little Women</Text>
           </View>
 
@@ -88,6 +98,7 @@ export default function Home() {
 }
 
 const estilos = StyleSheet.create({
+
   fundo:{
     color:"#deb887"
 
@@ -146,4 +157,16 @@ const estilos = StyleSheet.create({
     marginTop: 8,
     fontWeight: "bold",
   },
+
+  card: {
+    height: 140,
+    width: "25%",
+    backgroundColor: "#ffebcd",
+    marginLeft: "3%",
+    marginRight: "3%",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 5,
+  },
+
 });
