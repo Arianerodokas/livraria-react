@@ -4,6 +4,8 @@ import { StyleSheet, Image, Dimensions, Text, View } from "react-native";
 import nosfilmes from "../../../assets/nos-fimes.png";
 import logo from "../../../assets/logo.png";
 import aquiles from "../../../assets/aquiles.jpg";
+import imperfeitos from "../../../assets/imperfeitos.jpg";
+import little from "../../../assets/little-women.jpg";
 
 const width = Dimensions.get("screen").width;
 
@@ -17,12 +19,11 @@ export default function Home() {
       <View style={estilos.titulo}>
         {/* Livro: Melhor do que nos filmes */}
 
-        <View style={estilos.informacaolivros}>
-          <View>
+        <View style={estilos.informacaolivros} >
+          <View style={estilos.livro}>
             <Image style={estilos.imageminfo} source={nosfilmes} />
             <Text style={estilos.nomelivros}>Melhor do que nos Filmes</Text>
           </View>
-
           <Text style={estilos.descricao}>
             O último ano do ensino médio clamava por acontecimentos grandiosos,
             um baile inesquecível e momentos apaixonantes. Por isso, como uma
@@ -36,22 +37,65 @@ export default function Home() {
         {/* Livro: A canção de aquiles */}
 
         <View style={estilos.informacaolivros}>
-          <Image style={estilos.imageminfo} source={aquiles} />
-          <Text style={estilos.nomelivros}>Canção de Aquiles</Text>
+          <View style={estilos.livro}>
+            <Image style={estilos.imageminfo} source={aquiles} />
+            <Text style={estilos.nomelivros}>Canção de Aquiles</Text>
+          </View>
+
+          <Text style={estilos.descricao}>
+            A Canção de Aquiles é um romance de 2011 da escritora americana
+            Madeline Miller. Ambientado durante a Era Heróica Grega, é uma
+            adaptação da Ilíada de Homero contada da perspectiva de Pátroclo.
+          </Text>
+          <Text style={estilos.preco}>R$ 36,00</Text>
         </View>
 
-        <Text style={estilos.descricao}>
-          A Canção de Aquiles é um romance de 2011 da escritora americana
-          Madeline Miller. Ambientado durante a Era Heróica Grega, é uma
-          adaptação da Ilíada de Homero contada da perspectiva de Pátroclo.
-        </Text>
-        <Text style={estilos.preco}>R$ 36,00</Text>
+            {/* Livro: Imperfeitos */}
+
+            <View style={estilos.informacaolivros}>
+          <View style={estilos.livro}>
+            <Image style={estilos.imageminfo} source={imperfeitos} />
+            <Text style={estilos.nomelivros}>Imperfeitos</Text>
+          </View>
+
+          <Text style={estilos.descricao}>
+          Olive se sente como a gêmea azarada da casa: dos acidentes estranhamente 
+          inexplicáveis ao fracasso na vida profissional e amorosa — nada dá certo
+          para ela.
+          </Text>
+          <Text style={estilos.preco}>R$ 18,00</Text>
+        </View>
+
+           {/* Livro: Little Women */}
+
+           <View style={estilos.informacaolivros}>
+          <View style={estilos.livro}>
+            <Image style={estilos.imageminfo} source={little} />
+            <Text style={estilos.nomelivros}>Little Women</Text>
+          </View>
+
+          <Text style={estilos.descricao}>
+          Nos anos seguintes à Guerra de Secessão, Jo March e suas 
+          duas irmãs voltam para casa quando Beth, a tímida irmã caçula,
+           desenvolve uma doença devastadora que muda para sempre a vida delas.
+          </Text>
+          <Text style={estilos.preco}>R$ 50,00</Text>
+        </View>
+
       </View>
     </View>
   );
 }
 
 const estilos = StyleSheet.create({
+  fundo:{
+    color:"#deb887"
+
+  },
+
+  livro: {
+    flexDirection: "row"
+  },
   logo: {
     width: "100%",
     height: (578 / 768) * width,
@@ -77,6 +121,7 @@ const estilos = StyleSheet.create({
     lineHeight: 26,
     marginLeft: 12,
     fontWeight: "bold",
+    alignSelf: "center"
   },
 
   imageminfo: {
@@ -85,7 +130,7 @@ const estilos = StyleSheet.create({
   },
 
   informacaolivros: {
-    flexDirection: "row",
+    flexDirection: "column",
     paddingVertical: 12,
   },
 
@@ -99,5 +144,6 @@ const estilos = StyleSheet.create({
     lineHeight: 42,
     color: "#F6E90E",
     marginTop: 8,
+    fontWeight: "bold",
   },
 });

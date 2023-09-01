@@ -1,13 +1,11 @@
-import Home from './src/pages/Home/index';
-import { View, StatusBar, SafeAreaView } from 'react-native';
+import Home from "./src/pages/Home/index";
+import { View, StatusBar, ScrollView } from "react-native";
 
 export default function App() {
   return (
-
-    <SafeAreaView>
-    <StatusBar/>
-    <Home/>
-  </SafeAreaView>
-
+    <ScrollView>
+      <StatusBar />
+      <Home />
+    </ScrollView>
   );
 }
