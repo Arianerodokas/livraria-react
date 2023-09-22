@@ -1,22 +1,20 @@
 import React from "react";
-import { StyleSheet, Image, Dimensions, Text, View } from "react-native";
+import { StyleSheet, Image, Text, View } from "react-native";
+import Topo from "./components/Topo";
 
 import nosfilmes from "../../../assets/nos-fimes.png";
-import logo from "../../../assets/logo.png";
 import aquiles from "../../../assets/aquiles.jpg";
 import imperfeitos from "../../../assets/imperfeitos.jpg";
 import little from "../../../assets/little-women.jpg";
 
-const width = Dimensions.get("screen").width;
+
 
 export default function Home() {
   return (
+    
     <View>
-      <Image source={logo} style={estilos.logo} />
-
-      <Text style={estilos.titulo}>Livraria e Ari</Text>
-
       <View style={estilos.titulo}>
+        <Topo/>
         {/* Livro: Melhor do que nos filmes */}
 
       
@@ -107,10 +105,7 @@ const estilos = StyleSheet.create({
   livro: {
     flexDirection: "row"
   },
-  logo: {
-    width: "100%",
-    height: (578 / 768) * width,
-  },
+
 
   titulo: {
     fontSize: 24,
