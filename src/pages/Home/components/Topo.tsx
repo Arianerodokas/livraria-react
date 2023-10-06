@@ -4,14 +4,22 @@ import logo from "../../../../assets/logo.png";
 
 const width = Dimensions.get("screen").width;
 
-export default function Topo() {
+type Props ={
+  titulo: string;
+}  // adicionei essa parte
+
+
+export default function Topo({titulo}: Props) { // adicionei essa parte
   return (
     <>
-      <Image source={logo} style={estilos.logo} />
-      <Text style={estilos.titulo}>Livraria e Ari</Text>
+      <Image source={topo} style={estilos.topo} />
+      <Text style={estilos.titulo}>{titulo} </Text> // adicionei essa parte
+    
     </>
+    
   );
 }
+
 
 const estilos = StyleSheet.create({
   logo: {

@@ -2,18 +2,23 @@ import React from "react";
 import { StyleSheet, Image, Text, View } from "react-native";
 import Topo from "./components/Topo";
 import Detalhe from "./components/Detalhe";
+import home from '../../mocks/home';
 
 export default function Home() {
   return (
-    <View>
-      <View style={estilos.titulo}>
-        <Topo />
+    <>
+      <Topo titulo={home.topo.titulo} />
+      <View style={estilos.home}>
+        <Detalhe
+          nome={home.detalhes.nome}
+          nomeFazenda={home.detalhes.nomeLivraria}
+          descricao={home.detalhes.descricao}
+          preco={home.detalhes.preco}
+        />
       </View>
-      <Detalhe />
-    </View>
+    </>
   );
 }
-
 const estilos = StyleSheet.create({
   titulo: {
     fontSize: 24,
