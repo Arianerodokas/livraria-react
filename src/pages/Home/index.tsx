@@ -8,10 +8,10 @@ export default function Home() {
   return (
     <>
       <Topo titulo={home.topo.titulo} />
-      <View style={estilos.home}>
+      <View style={estilos.titulo}>
         <Detalhe
           nome={home.detalhes.nome}
-          nomeFazenda={home.detalhes.nomeLivraria}
+          nomeLivraria={home.detalhes.nomeLivraria}
           descricao={home.detalhes.descricao}
           preco={home.detalhes.preco}
         />

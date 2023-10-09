@@ -6,12 +6,40 @@ import aquiles from "../../../../assets/aquiles.jpg";
 import imperfeitos from "../../../../assets/imperfeitos.jpg";
 import little from "../../../../assets/little-women.jpg";
 
-export default function Detalhe() {
+type Props = {
+  nome: string;
+  nomeLivraria: string;
+  descricao: string;
+  preco: string;
+};
+
+export default function Detalhe({
+  nome,
+  nomeLivraria,
+  descricao,
+  preco,
+}: Props) {
   return (
     <>
+ <Text style={estilos.informacaolivros}>{nome}</Text>
+
+<View style={estilos.card}>
+  <Image style={estilos.imageminfo} source={nosfilmes} />
+  <Text style={estilos.nomelivros}>{nomeLivraria}</Text>
+</View>
+
+<Text style={estilos.descricao}>{descricao}</Text>
+<Text style={estilos.preco}>{preco}</Text>
+
+
+
+
+
+
+    
       {/* Livro: Melhor do que nos filmes */}
 
-      <View style={estilos.informacaolivros}>
+     {/* <View style={estilos.informacaolivros}>
         <View style={estilos.livro}>
           <View style={estilos.card}>
             <Image style={estilos.imageminfo} source={nosfilmes} />
@@ -27,9 +55,11 @@ export default function Detalhe() {
         </Text>
         <Text style={estilos.preco}>R$ 41,00</Text>
       </View>
+    */}
 
       {/* Livro: A canção de aquiles */}
 
+      {/*
       <View style={estilos.informacaolivros}>
         <View style={estilos.livro}>
           <View style={estilos.card}>
@@ -45,9 +75,12 @@ export default function Detalhe() {
         </Text>
         <Text style={estilos.preco}>R$ 36,00</Text>
       </View>
+      */}
 
       {/* Livro: Imperfeitos */}
 
+
+ {/*
       <View style={estilos.informacaolivros}>
         <View style={estilos.livro}>
           <View style={estilos.card}>
@@ -64,7 +97,11 @@ export default function Detalhe() {
         <Text style={estilos.preco}>R$ 18,00</Text>
       </View>
 
+      */}
+
       {/* Livro: Little Women */}
+
+      {/*
 
       <View style={estilos.informacaolivros}>
         <View style={estilos.livro}>
@@ -81,6 +118,7 @@ export default function Detalhe() {
         </Text>
         <Text style={estilos.preco}>R$ 50,00</Text>
       </View>
+      */}
     </>
   );
 }

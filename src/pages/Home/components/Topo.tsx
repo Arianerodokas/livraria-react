@@ -12,7 +12,7 @@ type Props ={
 export default function Topo({titulo}: Props) { // adicionei essa parte
   return (
     <>
-      <Image source={topo} style={estilos.topo} />
+      <Image source={logo} style={estilos.logo} />
       <Text style={estilos.titulo}>{titulo} </Text> // adicionei essa parte
     
     </>
